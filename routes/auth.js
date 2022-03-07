@@ -10,6 +10,6 @@ router.route('/login')
     .post(login);
 
 router.route('/logout')
-    .get(logout);
+    .get(checkLoginStatus ,logout);
 
 module.exports = router;
