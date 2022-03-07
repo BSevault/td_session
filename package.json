@@ -1,0 +1,25 @@
+{
+  "name": "sessions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js",
+    "integrateSchemas": "mariadb -u root -p < ./database/schemas.sql",
+    "integrateProcedures": "mariadb -u root -p < ./database/procedures.sql",
+    "integratePermissions": "mariadb -u root -p < ./database/permissions.sql"
+  },
+  "author": "mzeghdoudi",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "express": "^4.17.3",
+    "express-promise-router": "^4.1.1",
+    "express-session": "^1.17.2",
+    "mariadb": "^3.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
